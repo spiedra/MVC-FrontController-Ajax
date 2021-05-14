@@ -21,7 +21,7 @@
                     <h1 class="registration-section__tittle">Delete Movie</h1>
                 </div>
                 <article class="registration-section__form-article">
-                    <form class="registration-form" method="get" action="index.php">
+                    <form class="registration-form" method="post" action="index.php">
                         <input type="hidden" name="controller" value="Movie" />
                         <input type="hidden" name="action" value="exceuteQueryAccordingToButtonDelete" />
                         <div class="container-registration__form container-registration__form--delete">

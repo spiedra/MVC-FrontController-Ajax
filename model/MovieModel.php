@@ -57,6 +57,22 @@ class MovieModel {
         return $result;
     }
 
+    public function getMovieByActorGenreAjax($genreName, $actorFullName){
+        $query = $this->database->prepare("call sp_get_movieName_by_genre_and_actor('$genreName','$actorFullName')");
+        $query->execute();
+        $result = $query->fetchAll();
+        $query->closeCursor();
+        return $result;
+    }
+
+    public function getMovieDataByMovieNameAjax($movieName){
+        $query = $this->database->prepare("call sp_get_movieData_by_movieName('$movieName')");
+        $query->execute();
+        $result = $query->fetchAll();
+        $query->closeCursor();
+        return $result;
+    }
+
     public function deleteMovieByName($movieName) {
         $query = $this->database->prepare("call sp_delete_movie_by_name('$movieName')");
         $query->execute();

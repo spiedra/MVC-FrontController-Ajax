@@ -99,11 +99,11 @@ DELIMITER $$
 create procedure sp_get_movie_by_name(in p_movie_name varchar(50))
 begin 
 SELECT 
- code
-,name
-,duration
-,language
-,synopsis
+	 code
+	,name
+	,duration
+	,language
+	,synopsis
 FROM tb_movie
 WHERE name LIKE CONCAT('%', p_movie_name , '%');
 end;
@@ -236,9 +236,9 @@ where mv.name = p_movieName;
 end;
 
 DELIMITER $$
-create procedure sp_get_actors_by_MovieGenre( in p_genre_name varchar(50))
+CREATE procedure sp_get_actors_by_MovieGenre( in p_genre_name varchar(50))
 begin 
-select 
+select distinct
  a.name
 ,a.last_name
 from tb_movie MV
@@ -256,7 +256,7 @@ end;
 DELIMITER $$
 create procedure sp_get_genres_by_MovieGenre( in p_genre_name varchar(50))
 begin 
-select 
+select distinct
 g.genre_name
 from tb_movie MV
 	JOIN tb_movie_genre mvg
@@ -265,6 +265,39 @@ from tb_movie MV
 			ON g.genre_id = mvg.genre_id
 where g.genre_name = p_genre_name;
 end;
+
+DELIMITER $$
+create procedure sp_get_movieName_by_genre_and_actor( in p_genre_name varchar(50), in p_actor_fullName varchar(50))
+begin 
+SELECT
+	 MV.name
+    ,CONCAT(A.NAME, A.LAST_NAME) AS FULL_NAME
+    ,gen.genre_name
+FROM tb_movie MV
+	JOIN tb_movie_genre MVG
+    	ON MV.code = MVG.movie_code
+		JOIN TB_GENRE GEN
+        	ON GEN.GENRE_ID = MVG.GENRE_ID
+            JOIN TB_MOVIE_ACTOR MVA
+				ON MV.CODE = MVA.MOVIE_CODE
+                JOIN TB_ACTOR A
+					ON MVA.ACTOR_ID = A.ACTOR_ID
+WHERE GEN.genre_name = p_genre_name AND CONCAT(A.name,' ', A.last_name) = p_actor_fullName;
+end;
+
+DELIMITER $$
+create procedure sp_get_movieData_by_movieName( in p_movieName varchar(50))
+begin 
+SELECT 
+	 code
+	,name
+	,duration
+	,language
+	,synopsis
+FROM tb_movie
+WHERE name = p_movieName;
+end;
+
 
 
 

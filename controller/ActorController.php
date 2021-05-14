@@ -13,7 +13,7 @@ class ActorController {
     }
 
     public function registerActor() {
-        $this->actorModel->registerActor($_GET['actorName'], $_GET['actorLastName']);
+        $this->actorModel->registerActor($_POST['actorName'], $_POST['actorLastName']);
         $this->showActorRegisterView();
     }
 

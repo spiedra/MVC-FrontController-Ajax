@@ -20,9 +20,9 @@
                     <h1 class="registration-section__tittle">Register Actor</h1>
                 </div>
                 <article class="registration-section__form-article">
-                    <form class="registration-form" method="get" action="index.php">
-                        <input type="hidden" name="controller" value="Actor" />
-                        <input type="hidden" name="action" value="registerActor" />
+                    <form class="registration-form" method="post" action="?controller=Actor&action=registerActor">
+                        <!-- <input type="hidden" name="controller" value="Actor" />
+                        <input type="hidden" name="action" value="registerActor" /> -->
                         <div class="container-registration__form">
                             <label class="form__label--registration" for="actorName">Name:</label>
                             <input class="form__input--registration" name="actorName" />

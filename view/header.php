@@ -11,6 +11,7 @@
             <li class="list__item"><a class="list__link" href="?controller=Movie&action=showMovieUpdateView">Update Movie</a></li>
             <li class="list__item"><a class="list__link" href="?controller=Movie&action=showMovieDeleteView">Delete Movie</a></li>
             <li class="list__item"><a class="list__link" href="?controller=Movie&action=showMovieSearchView">Search Movie</a></li>
+            <li class="list__item"><a class="list__link" href="?controller=Movie&action=showMovieFilterView">Filter Movie</a></li>
         </ul>
     </nav>
 </header>

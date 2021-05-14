@@ -20,9 +20,7 @@
                     <h1 class="registration-section__tittle">Register Movie</h1>
                 </div>
                 <article class="registration-section__form-article">
-                    <form class="registration-form" method="get" action="index.php">
-                        <input type="hidden" name="controller" value="Movie" />
-                        <input type="hidden" name="action" value="registerMovie" />
+                    <form class="registration-form" method="post" action="?controller=Movie&action=registerMovie">
                         <div class="container-registration__form">
                             <label class="form__label--registration" >Code:</label>
                             <input class="form__input--registration" name="movieCode" />

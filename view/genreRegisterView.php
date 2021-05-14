@@ -21,9 +21,7 @@
                     <h1 class="registration-section__tittle">Register Movie Gender</h1>
                 </div>
                 <article class="registration-section__form-article">
-                    <form class="registration-form" method="get" action="index.php">
-                        <input type="hidden" name="controller" value="Genre" />
-                        <input type="hidden" name="action" value="registerGenre"/>
+                    <form class="registration-form" method="post" action="?controller=Genre&action=registerGenre">
                         <div class="container-registration__form">
                             <label class="form__label--registration" for="genreName">Genre Name:</label>
                             <input class="form__input--registration" name="genreName" />

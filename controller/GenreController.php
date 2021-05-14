@@ -13,7 +13,7 @@ class GenreController {
     }
 
     public function registerGenre() {
-        $this->genreModel->registerGenre($_GET['genreName']);
+        $this->genreModel->registerGenre($_POST['genreName']);
         $this->showGenreRegisterView();
     }
 
