@@ -135,6 +135,10 @@ class MovieController
         echo json_encode($this->listGenresByMovieName($_POST['movieName']));
     }
 
+    public function getMoviesByAjax(){
+        echo json_encode($this->listMovieByName($_POST['movieName']));
+    }
+
     public function listMovieByName($movieName)
     {
         return $this->movieModel->getMovieByName($movieName);

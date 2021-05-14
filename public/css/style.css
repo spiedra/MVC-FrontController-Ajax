@@ -98,6 +98,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 0.8rem 0rem;
+    margin: 1rem 0rem;
     font-size: 1.2em;
 }
 

@@ -83,7 +83,7 @@ $(document).ready(function() {
                 tableActor.empty();
                 tableActor.append("<tr><th>Name</th><th>Last Name</th></tr>");
                     for (var i = 0; i < response.length; i++) {
-                        tableActor.append("<tr><td>"+response[i]['name']+"</td><td>"+response[i]['last_name']+"</td></tr>");
+                        (tableActor).append("<tr><td>"+response[i]['name']+"</td><td>"+response[i]['last_name']+"</td></tr>");
                 }
     
             }

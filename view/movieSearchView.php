@@ -58,6 +58,7 @@
                                 <th>Duration</th>
                                 <th>Language</th>
                                 <th>Synopsis</th>
+                                <th>Options</th>
                             </tr>
 
                             <?php
