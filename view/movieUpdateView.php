@@ -23,9 +23,21 @@
             </div>
             <article class="registration-section__form-article">
                 <form class="registration-form" method="post">
+                    <div class="container-registration__form">
+                        <label class="form__label--registration--cmbox">Modified movie information:</label>
+                        <table id="movieTable" class="form__table">
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Duration</th>
+                                <th>Language</th>
+                                <th>Synopsis</th>
+                            </tr>
+                        </table>
+                    </div>
                     <div class="container-registration__form container-registration__form--delete">
                         <label class="form__label--registration" for="genreName">Movie Name:</label>
-                        <input id="inputMovieName" class="form__input--registration form__input--delete" name="movieName"/>
+                        <input id="inputMovieName" class="form__input--registration form__input--delete" name="movieName" />
                         <input id="searchByNameButton" class="form__input-button--registration" type="button" value="Search by name" name="buttonSearchByName">
                     </div>
                     <div class="container-registration__form">
@@ -36,24 +48,23 @@
                     </div>
                     <div class="container-registration__form">
                         <label class="form__label--registration">Name:</label>
-                        <input class="form__input--registration" name="movieName" />
-                        <input id="modifyNameButton" class="form__input-button--registration" type="button" value="Modify name" name="buttonSearchByName">
+                        <input id="newMovieName" class="form__input--registration" name="movieName" />
+                        <input id="modifyNameButton" class="form__input-button--registration" type="button" value="Modify name" name="modifyMovieName">
                     </div>
                     <div class="container-registration__form">
                         <label class="form__label--registration">Duration:</label>
-                        <input class="form__input--registration" name="movieDuration" />
-                        <input id="modifyNameButton" class="form__input-button--registration" type="button" value="Modify duration" name="buttonSearchByName">
+                        <input id="newDuration" class="form__input--registration" name="movieDuration" />
+                        <input id="modifyDurationButton" class="form__input-button--registration" type="button" value="Modify duration" name="buttonSearchByName">
                     </div>
                     <div class="container-registration__form">
                         <label class="form__label--registration">Language:</label>
-                        <input class="form__input--registration" name="movieLanguage" />
-                        <input id="modifyNameButton" class="form__input-button--registration" type="button" value="Modify language" name="buttonSearchByName">
+                        <input id="newLenguage" class="form__input--registration" name="movieLanguage" />
+                        <input id="modifyLanguageButton" class="form__input-button--registration" type="button" value="Modify language" name="buttonSearchByName">
                     </div>
                     <div class="container-registration__form">
                         <label class="form__label--registration" for="movieSynopsis">Synopsis:</label>
-                        <textarea class="form__input--registration--txta" name="movieSynopsis"></textarea>
-                        <input id="modifyNameButton" class="form__input-button--registration" type="button" value="Modify Synopsis" name="buttonSearchByName">
-
+                        <textarea id="newSynopsis" class="form__input--registration--txta" name="movieSynopsis"></textarea>
+                        <input id="modifySynopsisButton" class="form__input-button--registration" type="button" value="Modify Synopsis" name="buttonSearchByName">
                     </div>
             </article>
         </section>

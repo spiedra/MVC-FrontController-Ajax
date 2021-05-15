@@ -160,19 +160,6 @@ VALUES
 end;
 
 DELIMITER $$
-create procedure sp_modify_movie(in p_code int, in p_name varchar(50), 
-in p_duration varchar(50), in p_language varchar(50), in p_synopsis varchar(100))
-begin 
-UPDATE tb_movie
-SET name = p_name
-		   ,duration = p_duration
-		   ,language = p_language
-		   ,synopsis = p_synopsis
-WHERE code = p_code;
-end;
-
-
-DELIMITER $$
 create procedure sp_insert_movie(in p_code int, in p_name varchar(50), 
 in p_duration varchar(50), in p_language varchar(50), in p_synopsis varchar(100))
 begin 
@@ -298,6 +285,37 @@ FROM tb_movie
 WHERE name = p_movieName;
 end;
 
+DELIMITER $$
+create procedure sp_modify_movieName(in p_movieCode int, in p_newMovieName varchar(50))
+begin 
+UPDATE tb_movie
+SET name = p_newMovieName
+WHERE code = p_movieCode;
+end;
+
+DELIMITER $$
+create procedure sp_modify_movieDuration(in p_movieCode int, in p_newMovieDuration varchar(50))
+begin 
+UPDATE tb_movie
+SET duration = p_newMovieDuration
+WHERE code = p_movieCode;
+end;
+
+DELIMITER $$
+create procedure sp_modify_movieLanguage(in p_movieCode int, in p_newLanguage varchar(50))
+begin 
+UPDATE tb_movie
+SET language = p_newLanguage
+WHERE code = p_movieCode;
+end;
+
+DELIMITER $$
+create procedure sp_modify_movieSynopsis(in p_movieCode int, in p_newSynopsis varchar(50))
+begin 
+UPDATE tb_movie
+SET synopsis = p_newSynopsis
+WHERE code = p_movieCode;
+end;
 
 
 

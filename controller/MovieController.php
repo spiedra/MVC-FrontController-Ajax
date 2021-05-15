@@ -139,6 +139,26 @@ class MovieController
         echo json_encode($this->listMovieByName($_POST['movieName']));
     }
 
+    public function modifyNameAjax(){
+        $this->movieModel->modifyMovieName($_POST['movieCode'], $_POST['newMovieName']);
+        echo json_encode($this->listMovieByName($_POST['newMovieName']));
+    }
+
+    public function modifyDurationAjax(){
+        $this->movieModel->modifyMovieDuration($_POST['movieCode'], $_POST['newDuration']);
+        echo json_encode($this->listMovieByName($_POST['movieName']));
+    }
+
+    public function modifyLanguageAjax(){
+        $this->movieModel->modifyMovieLanguage($_POST['movieCode'], $_POST['newLanguage']);
+        echo json_encode($this->listMovieByName($_POST['movieName']));
+    }
+
+    public function modifySynopsisAjax(){
+        $this->movieModel->modifyMovieSynopsis($_POST['movieCode'], $_POST['newSynopsis']);
+        echo json_encode($this->listMovieByName($_POST['movieName']));
+    }
+
     public function listMovieByName($movieName)
     {
         return $this->movieModel->getMovieByName($movieName);

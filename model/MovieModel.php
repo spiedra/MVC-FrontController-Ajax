@@ -103,4 +103,28 @@ class MovieModel {
         $query->closeCursor();
     }
 
+    public function modifyMovieName($movieCode, $newMovieName) {
+        $query = $this->database->prepare("call sp_modify_movieName('$movieCode','$newMovieName')");
+        $query->execute();
+        $query->closeCursor();
+    }
+
+    public function modifyMovieDuration($movieCode, $newMovieDuration) {
+        $query = $this->database->prepare("call sp_modify_movieDuration('$movieCode','$newMovieDuration')");
+        $query->execute();
+        $query->closeCursor();
+    }
+
+    public function modifyMovieLanguage($movieCode, $newMovieLanguage) {
+        $query = $this->database->prepare("call sp_modify_movieLanguage('$movieCode','$newMovieLanguage')");
+        $query->execute();
+        $query->closeCursor();
+    }
+
+    public function modifyMovieSynopsis($movieCode, $newMovieSynopsis) {
+        $query = $this->database->prepare("call sp_modify_movieSynopsis('$movieCode','$newMovieSynopsis')");
+        $query->execute();
+        $query->closeCursor();
+    }
+
 }
