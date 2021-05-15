@@ -17,7 +17,7 @@
 
         <main class="main">
             <div class="main-container">
-                <h1 class="container__tittle">IF4101 - Homework #1</h1>
+                <h1 class="container__tittle">IF4101 - Homework #2</h1>
             </div>
         </main>
     </body>

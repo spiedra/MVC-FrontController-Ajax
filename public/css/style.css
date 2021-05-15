@@ -9,7 +9,7 @@ body {
     font-family: "open sans";
     background-image: url(../images/background.jpg);
     background-attachment: fixed;
-    min-width: 994px;
+    min-width: 1086px;
 }
 
 .header {
