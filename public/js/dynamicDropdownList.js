@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $("#selectGenres").change(function() {
-       
         var genreSelected = $(this).val();
         var selectActors = $('#selectActors');
 
